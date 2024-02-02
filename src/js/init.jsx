@@ -10,7 +10,7 @@ import { configure } from './actions';
 const init = (element, config = {}) => {
 	const libraries = { ...defaults.libraries, ...config.libraries };
 	const apiConfig = { ...defaults.apiConfig, ...config.apiConfig };
-	const { store, history } = setupStore();
+	const { store, history } = setupStore(config);
 
 	store.dispatch(
 		configure({ ...defaults, ...config, apiConfig, libraries })

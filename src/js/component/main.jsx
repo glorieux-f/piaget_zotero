@@ -21,32 +21,27 @@ export const MainEmbedded = () => {
     );
 }
 
-export const MainZotero = (history) => (
-	<BrowserRouter>
-		<Switch>
-			{redirects.map(redirect =>
-				<Redirect exact key={redirect.from} from={redirect.from} to={redirect.to} />
-			)}
-			{routes.map(route =>
-				<Route key={route} path={route} component={MainEmbedded} exact />
-			)}
-			<Redirect from="/*" to="/" />
-		</Switch>
-	</BrowserRouter>
-);
-
 const Main = ({ store, history }) => {
-	const isEmbedded = store.getState().config.isEmbedded;
+	const config = store.getState().config;
 	return (
 		<ErrorBoundary>
 			<Provider store={ store }>
-				{isEmbedded ?
+				{config.isEmbedded ?
 					<MainEmbedded /> :
-					(
-					<ConnectedRouter history={history}>
-						<MainZotero />
-					</ConnectedRouter>
-				)}
+					(<ConnectedRouter history={history}>
+						<BrowserRouter basename={config.basename}>
+							<Switch>
+								{redirects.map(redirect =>
+									<Redirect exact key={redirect.from} from={redirect.from} to={redirect.to} />
+								)}
+								{routes.map(route =>
+									<Route key={route} path={route} component={MainEmbedded} exact />
+								)}
+								<Redirect from="/*" to="/" />
+							</Switch>
+						</BrowserRouter>
+					</ConnectedRouter>)
+				}
 			</Provider>
 		</ErrorBoundary>
 	);
