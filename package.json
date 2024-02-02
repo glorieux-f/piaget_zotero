@@ -21,7 +21,7 @@
     "build:all": "run-p 'build:js -s' 'build:scss -s' 'build:html -s' 'build:static -s'",
     "build:js": "mkdir -p build/static && NODE_ENV=production rollup -c",
     "build:scss": "for f in src/scss/*.scss; do sass --no-source-map $f build/static/`basename $f .scss`.css; done;",
-    "build:html": "mkdir -p build/ && rsync -vazL src/html/* build/",
+    "build:html": "mkdir -p build/ && rsync -vazL src/html/ build/",
     "build:styles-json": "node scripts/build-styles-json.cjs",
     "build:pdf-reader": "node scripts/fetch-pdf-reader.cjs",
     "build:pdf-worker": "node scripts/fetch-pdf-worker.cjs",
