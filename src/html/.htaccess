@@ -1,0 +1,12 @@
+Options -MultiViews
+
+# Serve files from the "static" directory directly
+RewriteRule ^(.*/)static/(.*)$ static/$2 [QSA,L]
+
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^ index.html [QSA,L]
+
+
