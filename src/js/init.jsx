@@ -10,11 +10,13 @@ import { configure } from './actions';
 const init = (element, config = {}) => {
 	const libraries = { ...defaults.libraries, ...config.libraries };
 	const apiConfig = { ...defaults.apiConfig, ...config.apiConfig };
+	if (!config.basename) config.basename = "";
+	// transmit basename to store
 	const { store, history } = setupStore(config);
-
 	store.dispatch(
 		configure({ ...defaults, ...config, apiConfig, libraries })
 	);
+	// ??? basename is lost from store.getState().config
 
 	if (store.getState().config.isEmbedded) {
 		store.dispatch({
@@ -40,6 +42,7 @@ const init = (element, config = {}) => {
 	}
 
 	const root = createRoot(element);
+	history.basename = config.basename; // to inform BrowserRouter/@basename
 	root.render(<Main store={ store } history={ history } />);
 }
 

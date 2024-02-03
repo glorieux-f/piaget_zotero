@@ -29,7 +29,7 @@ const Main = ({ store, history }) => {
 				{config.isEmbedded ?
 					<MainEmbedded /> :
 					(<ConnectedRouter history={history}>
-						<BrowserRouter basename={config.basename}>
+						<BrowserRouter basename={history.basename}>
 							<Switch>
 								{redirects.map(redirect =>
 									<Redirect exact key={redirect.from} from={redirect.from} to={redirect.to} />
