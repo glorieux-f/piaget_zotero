@@ -36,10 +36,10 @@ export const preferences = {
 	//@NOTE: sum of all minFractions must be < 1.0
 	columns: [
 		{
-			field: 'title',
-			fraction: 0.45,
+			field: 'callNumber',
+			fraction: .1,
 			isVisible: true,
-			minFraction: 0.1,
+			minFraction: .05,
 			sort: 'asc',
 		},
 		{
@@ -50,19 +50,19 @@ export const preferences = {
 		},
 		{
 			field: 'date',
-			fraction: 0.2,
+			fraction: 0.1,
 			isVisible: true,
 			minFraction: 0.05,
 		},
 		{
-			field: 'itemType',
-			fraction: 0.2,
-			isVisible: false,
-			minFraction: 0.05,
+			field: 'title',
+			fraction: 0.45,
+			isVisible: true,
+			minFraction: 0.1,
 		},
 		{
-			field: 'year',
-			fraction: 0.1,
+			field: 'itemType',
+			fraction: 0.2,
 			isVisible: false,
 			minFraction: 0.05,
 		},
@@ -91,36 +91,6 @@ export const preferences = {
 			minFraction: .05
 		},
 		{
-			field: 'libraryCatalog',
-			fraction: .2,
-			isVisible: false,
-			minFraction: .05,
-		},
-		{
-			field: 'callNumber',
-			fraction: .2,
-			isVisible: false,
-			minFraction: .05,
-		},
-		{
-			field: 'rights',
-			fraction: .2,
-			isVisible: false,
-			minFraction: .05,
-		},
-		{
-			field: 'dateAdded',
-			fraction: 0.1,
-			isVisible: false,
-			minFraction: 0.05,
-		},
-		{
-			field: 'dateModified',
-			fraction: 0.1,
-			isVisible: false,
-			minFraction: 0.05,
-		},
-		{
 			field: 'extra',
 			fraction: 0.2,
 			isVisible: false,
@@ -130,12 +100,6 @@ export const preferences = {
 			field: 'createdByUser',
 			fraction: 0.2,
 			isVisible: false,
-			minFraction: 0.05,
-		},
-		{
-			field: 'attachment',
-			fraction: 0.05,
-			isVisible: true,
 			minFraction: 0.05,
 		},
 	]

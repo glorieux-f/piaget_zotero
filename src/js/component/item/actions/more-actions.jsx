@@ -80,7 +80,8 @@ const MoreActionsDropdownDesktop = memo(props => {
 		dispatch(currentGoToSubscribeUrl());
 	}, [dispatch]);
 
-	return (
+	return (""
+		/*
 		<Dropdown
 			className="new-item-selector"
 			isOpen={ isOpen }
@@ -108,6 +109,7 @@ const MoreActionsDropdownDesktop = memo(props => {
 				)
 			}
 		</Dropdown>
+		*/
 	);
 });
 

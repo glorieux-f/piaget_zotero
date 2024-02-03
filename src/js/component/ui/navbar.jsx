@@ -59,7 +59,7 @@ const Navbar = memo(({ entries = [] }) => {
 					onKeyDown={ handleKeyDown }
 					tabIndex={ -2 }
 				>
-					Zotero
+					Piaget
 				</a>
 			</h1>
 			<h2 id="site-navigation" className="offscreen">Site navigation</h2>

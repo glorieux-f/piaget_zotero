@@ -1,9 +1,10 @@
 {
-  "name": "Zotero Web Library",
-  "short_name": "Web Library",
+
+  "name": "Piaget, bibliographie",
+  "short_name": "Piaget, bibliographie",
   "display": "fullscreen",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./index.html",
+  "scope": "./",
   "icons": [
     {
       "src": "/static/icons/icon-192x192.png",
