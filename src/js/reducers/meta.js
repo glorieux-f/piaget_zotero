@@ -26,7 +26,7 @@ const defaultState = {
 }
 
 // TODO: localization
-const locale = 'en-US';
+const locale = 'fr-FR';
 const ignoredItemTypes = ['note', 'attachment', 'annotation'];
 
 const meta = (state = { ...defaultState }, action) => {

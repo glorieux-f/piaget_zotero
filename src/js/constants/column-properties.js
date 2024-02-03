@@ -1,15 +1,14 @@
 export default Object.freeze({
+	callNumber: {
+		name: 'Cote',
+		sortKey: 'callNumber',
+	},
 	attachment: {
-		name: 'Attachment',
+		name: 'Pdfs',
 		sortKey: false,
 	},
-	createdByUser: {
-		name: 'Added By',
-		sortKey: 'addedBy',
-		excludeInMyLibrary: true,
-	},
 	creator: {
-		name: 'Creator',
+		name: 'Auteur',
 		sortKey: 'creator',
 	},
 	date: {
@@ -17,11 +16,11 @@ export default Object.freeze({
 		sortKey: 'date',
 	},
 	dateAdded: {
-		name: 'Date Added',
+		name: 'Ajouté le',
 		sortKey: 'dateAdded',
 	},
 	dateModified: {
-		name: 'Date Modified',
+		name: 'Modifié le',
 		sortKey: 'dateModified',
 	},
 	extra: {
@@ -29,48 +28,31 @@ export default Object.freeze({
 		sortKey: 'extra',
 	},
 	itemType: {
-		name: 'Item Type',
+		name: 'Type',
 		sortKey: 'itemType',
 	},
 	publicationTitle: {
-		name: 'Publication Title',
+		name: 'Périodique',
 		sortKey: 'publicationTitle',
 	},
 	publisher: {
-		name: 'Publisher',
+		name: 'Éditeur',
 		sortKey: 'publisher',
 	},
 	title: {
-		name: 'Title',
+		name: 'Titre',
 		sortKey: 'title',
 	},
 	year: {
-		name: 'Year',
+		name: 'Année',
 		sortKey: 'date',
 	},
-	callNumber: {
-		name: 'Call Number',
-		sortKey: 'callNumber',
-		isUnderMoreColumns: true,
-	},
 	journalAbbreviation: {
-		name: 'Journal Abbreviation',
+		name: 'Périodique (abbr.)',
 		sortKey: 'journalAbbreviation',
-		isUnderMoreColumns: true,
 	},
 	language: {
-		name: 'Language',
+		name: 'Langue',
 		sortKey: 'language',
-		isUnderMoreColumns: true,
 	},
-	libraryCatalog: {
-		name: 'Library Catalog',
-		sortKey: 'libraryCatalog',
-		isUnderMoreColumns: true,
-	},
-	rights: {
-		name: 'Rights',
-		sortKey: 'rights',
-		isUnderMoreColumns: true,
-	}
 });
